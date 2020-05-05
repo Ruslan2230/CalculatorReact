@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default ({input}) => {
-    return <div className="screen">
-        <div>{input}</div>
+export default ({ input }) => {
+  return (
+    <div className="screen">
+      <div>{input}</div>
     </div>
-    
+  );
 };

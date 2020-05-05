@@ -1,99 +1,108 @@
 html {
   padding: 0;
   margin: 0;
-  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
 }
 
 body .App {
-color: #6cacc5;
-font: 300 18px/1.6 "Source Sans Pro", sans-serif;
-margin: 0;
-padding: 5em 0 2em;
-height: 100%;
-text-align: center;
-background-image:
-  radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
-  radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #6cacc5;
+  font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+
+  height: 100vh;
+  text-align: center;
+  background-image: radial-gradient(
+      50% 30% ellipse at center top,
+      #201e40 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
 }
 
 h1 {
-font-weight: 300;
-margin: 0;
+  font-weight: 300;
+  margin: 0;
 }
 
 /* Gradient text only on Webkit */
 .warning {
-background: -webkit-linear-gradient(45deg, #c97874 10%, #463042 90%);
-background-clip: text;
--webkit-text-fill-color: transparent;
-color: #8c5059;
-font-weight: 400;
-margin: 0 auto 3em;
-max-width: 9em;
+  background: -webkit-linear-gradient(45deg, #c97874 10%, #463042 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8c5059;
+  font-weight: 400;
+  margin: 0 auto 3em;
+  max-width: 9em;
 }
 
 .calculator {
-font-size: 28px;
-margin: 0 auto;
-width: 10em;
+  font-size: 28px;
+  /* margin: 0 auto; */
+  width: 10em;
 }
-.calculator::before, .calculator::after {
-content: " ";
-display: table;
+.calculator::before,
+.calculator::after {
+  content: " ";
+  display: table;
 }
 .calculator::after {
-clear: both;
+  clear: both;
 }
 
 /* Calculator after dividing by zero */
 .broken {
-animation: broken 2s;
-transform: translate3d(0, -2000px, 0);
-opacity: 0;
+  animation: broken 2s;
+  transform: translate3d(0, -2000px, 0);
+  opacity: 0;
 }
 
 .viewer {
-color: #c97874;
-float: left;
-line-height: 3em;
-text-align: right;
-text-overflow: ellipsis;
-overflow: hidden;
-width: 7.5em;
-height: 3em;
+  color: #c97874;
+  float: left;
+  line-height: 3em;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 7.5em;
+  height: 3em;
 }
 
 button {
-border: 0;
-background: rgba(42, 50, 113, 0.28);
-color: #6cacc5;
-cursor: pointer;
-float: left;
-font: inherit;
-margin: 0.25em;
-width: 2em;
-height: 2em;
-transition: all 0.5s;
+  border: 0;
+  background: rgba(42, 50, 113, 0.28);
+  color: #6cacc5;
+  cursor: pointer;
+  float: left;
+  font: inherit;
+  margin: 0.25em;
+  width: 2em;
+  height: 2em;
+  transition: all 0.5s;
 }
 
 button:hover {
-background: #201e40;
+  background: #201e40;
 }
 
 button:focus {
-outline: 0;
+  outline: 0;
 }
 
 @media (min-width: 420px) {
-.calculator {
-  width: 12em;
-}
+  .calculator {
+    width: 12em;
+  }
 
-.viewer {
-  width: 8.5em;
-}
+  .viewer {
+    width: 8.5em;
+  }
 
-button {
-  margin: 0.5em;
-}
+  button {
+    margin: 0.5em;
+  }
 }
