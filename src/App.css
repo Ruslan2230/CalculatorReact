@@ -1,17 +1,16 @@
-html {
+body {
   padding: 0;
   margin: 0;
-  height: 100%;
 }
 
-body .App {
-color: #6cacc5;
-font: 300 18px/1.6 "Source Sans Pro", sans-serif;
-margin: 0;
-padding: 5em 0 2em;
-height: 100%;
-text-align: center;
-background-image:
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6cacc5;
+  font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+  height: 100vh;
+  background-image:
   radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
   radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
 }
@@ -55,11 +54,10 @@ opacity: 0;
 .viewer {
 color: #c97874;
 float: left;
-line-height: 3em;
 text-align: right;
 text-overflow: ellipsis;
 overflow: hidden;
-width: 7.5em;
+width: 100%;
 height: 3em;
 }
 
@@ -84,13 +82,15 @@ button:focus {
 outline: 0;
 }
 
+.screen {
+  height: 3em;
+  line-height: 3em;
+  padding-right: 17px;
+}
+
 @media (min-width: 420px) {
 .calculator {
   width: 12em;
-}
-
-.viewer {
-  width: 8.5em;
 }
 
 button {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({addInput, calculate}) => {
+export default ({addInput, calculate, oneZero}) => {
     return <div>
         <button className="num" onClick={() => {addInput("7")}}>7</button>
         <button className="num" onClick={() => {addInput("8")}}>8</button>
@@ -17,7 +17,7 @@ export default ({addInput, calculate}) => {
         <button className="num" onClick={() => {addInput("3")}}>3</button>
         <button className="ops" onClick={() => {addInput("*")}}>*</button>
         
-        <button className="num" onClick={() => {addInput("0")}}>0</button>
+        <button className="num" onClick={() => {oneZero(0)}}>0</button>
         <button className="num" onClick={() => {addInput(".")}}>.</button>
         <button id="equal" className="equal" onClick={() => {calculate()}}>=</button>
         <button className="ops" onClick={() => {addInput("/")}}>/</button>
