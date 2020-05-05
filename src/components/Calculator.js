@@ -14,6 +14,7 @@ export default () => {
                 newInput = [...input];
                 newInput += 0 + char;
                 setInput(newInput);
+                return;
             } else {
                 newInput = [...input];
                 newInput += char;
@@ -22,10 +23,8 @@ export default () => {
             }
         }
 
-        // newInput = [...input, char];
         newInput = input;
         newInput += char;
-        console.log(newInput);
         setInput(newInput);
     }
 
